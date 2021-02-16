@@ -11,5 +11,6 @@
 [Finished Visualization](https://public.tableau.com/profile/yeung.shu.to#!/vizhome/BicycleBoom_16127603361710/Dashboard1)
 
 ## What I learned
--
--
+- How to add a reference line at a particualar date
+- How to create a text box that **grabs attention**
+- Overlay two area charts 
