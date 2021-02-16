@@ -13,17 +13,23 @@ I participated in these challenges to better understand how to communicate data 
 ## Examples
 Below is some of my work and comparisons against the original visualizations.
 
-### [2021/W1: The Great Bicycle Boom of 2020]]
+### [The Great Bicycle Boom of 2020](https://github.com/Marco-yeung/PersonalProjects/tree/main/Tableau%20Public%20Visualizations/Makeover_Monday/2021/W1)
+
+
 | **Original** | **Mine**|
 | --------- | --------|
 |<img src = "https://github.com/Marco-yeung/PersonalProjects/blob/main/Tableau%20Public%20Visualizations/Makeover_Monday/2021/W1/Images/Bicycle%20Boom.png"  width="1500">| <img src = "https://github.com/Marco-yeung/PersonalProjects/blob/main/Tableau%20Public%20Visualizations/Makeover_Monday/2021/W1/Images/Bicycle%20Boom(mine).png" width = "2000">
 
-### [2020/W46: Majority of Advertising Dollars Now Spent Online]
+### [Majority of Advertising Dollars Now Spent Online](https://github.com/Marco-yeung/PersonalProjects/tree/main/Tableau%20Public%20Visualizations/Makeover_Monday/2020/W46)
+
+
 | **Original** | **Mine**|
 | --------- | --------|
 |<img src = "https://github.com/Marco-yeung/PersonalProjects/blob/main/Tableau%20Public%20Visualizations/Makeover_Monday/2020/W46/Images/Internet%20Advertising.png" width = "2000" >| <img src = "https://github.com/Marco-yeung/PersonalProjects/blob/main/Tableau%20Public%20Visualizations/Makeover_Monday/2020/W46/Images/Internet%20Advertising(mine).png"> 
 
-### [2020/W50: Data assets and data culture]
+### [Data assets and data culture](https://github.com/Marco-yeung/PersonalProjects/tree/main/Tableau%20Public%20Visualizations/Makeover_Monday/2020/W41)
+
+
 | **Original** | **Mine**|
 | --------- | --------|
 |<img src = "https://github.com/Marco-yeung/PersonalProjects/blob/main/Tableau%20Public%20Visualizations/Makeover_Monday/2020/W41/Images/Data%20Assets%20and%20Data%20Culture.png" width = "500">| <img src = "https://github.com/Marco-yeung/PersonalProjects/blob/main/Tableau%20Public%20Visualizations/Makeover_Monday/2020/W41/Images/Data%20Assets%20and%20Data%20Culture(mine).png" height = "350"> |
