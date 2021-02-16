@@ -18,3 +18,4 @@
 - Group similar category to show a more comprehensive view of the data
 - How to show the total of a specific category e.g I have only shown the total of digital source
 - How to change the axis showing in billions
+- Create a focus for the title
