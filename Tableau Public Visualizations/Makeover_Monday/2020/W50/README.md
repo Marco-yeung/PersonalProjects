@@ -1,4 +1,4 @@
-A Statistical Analysis of the Work of Bob Ross
+# A Statistical Analysis of the Work of Bob Ross
 
 | **Original** | **Mine**|
 | --------- | --------|
