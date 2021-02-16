@@ -16,7 +16,7 @@ Below is some of my work and comparisons against the original visualizations.
 ### [2021/W1: The Great Bicycle Boom of 2020]]
 | **Original** | **Mine**|
 | --------- | --------|
-|<img src = "https://github.com/Marco-yeung/PersonalProjects/blob/main/Tableau%20Public%20Visualizations/Makeover_Monday/2021/W1/Images/Bicycle%20Boom.png" width = "500">| <img src = "PersonalProjects/Tableau Pubic Visualizations/Makeover_Monday/2021/W1/Images/Bicycle Boom(mine).png" width = "500">
+|<img src = "https://github.com/Marco-yeung/PersonalProjects/blob/main/Tableau%20Public%20Visualizations/Makeover_Monday/2021/W1/Images/Bicycle%20Boom.png" width = "500">| <img src = "https://github.com/Marco-yeung/PersonalProjects/blob/main/Tableau%20Public%20Visualizations/Makeover_Monday/2021/W1/Images/Bicycle%20Boom(mine).png" width = "500">
 
 ### [2020/W46: Majority of Advertising Dollars Now Spent Online]
 | **Original** | **Mine**|
@@ -26,3 +26,4 @@ Below is some of my work and comparisons against the original visualizations.
 ### [2020/W50: A Statistical Analysis of the Work of Bob Ross]
 | **Original** | **Mine**|
 | --------- | --------|
+|<img src = "https://github.com/Marco-yeung/PersonalProjects/blob/main/Tableau%20Public%20Visualizations/Makeover_Monday/2020/W50/Images/Data%20Assets%20and%20Data%20Culture.png" width = "500">| <img src = "https://github.com/Marco-yeung/PersonalProjects/blob/main/Tableau%20Public%20Visualizations/Makeover_Monday/2020/W50/Images/Data%20Assets%20and%20Data%20Culture(mine).png" width = "500"> |
