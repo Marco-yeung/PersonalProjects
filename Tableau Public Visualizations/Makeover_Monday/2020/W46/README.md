@@ -19,4 +19,4 @@
 - How to show the total of a specific category e.g I have only shown the total of digital source
 - How to change the axis showing in billions
 - Create a focus for the title
-- Figure out how to sort the bar from bottom to the top
+- Figure out how to sort the category from bottom to the top
