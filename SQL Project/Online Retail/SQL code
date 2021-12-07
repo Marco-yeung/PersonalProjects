@@ -1,0 +1,90 @@
+-- DROP DATABASE Retail
+-- CREATE DATABASE Retail
+-- GO
+
+SELECT *
+FROM Retail..OnlineRetail
+
+-- Total Country in the table
+SELECT COUNT(DISTINCT Country) AS NumberOfCountry
+FROM Retail..OnlineRetail
+
+-- Maximum unit price for a single
+SELECT Max(UnitPrice) AS MaxUnitPrice
+FROM Retail..OnlineRetail
+
+-- Price group by Invoice number
+SELECT InvoiceNo, ROUND(SUM(CAST(UnitPrice as float)),2) SumOfEachInvoice
+FROM Retail..OnlineRetail
+GROUP BY InvoiceNo
+
+-- Price group by customer ID
+-- Here we can find the total amount paid in the past one year
+SELECT CustomerID, ROUND(SUM(CAST(UnitPrice as float)),2) SumOfEachInvoice
+FROM Retail..OnlineRetail
+GROUP BY CustomerID
+
+-- We can set different tier to the customer
+-- The higher tier of the customer have, the higher extra discount the customer would have in some festival like christmas and black friday
+SELECT CustomerID, ROUND(SUM(CAST(UnitPrice as float)),2) SumOfEachInvoice, CASE
+WHEN ROUND(SUM(CAST(UnitPrice as float)),2) < 200 then 'Bronze'
+WHEN ROUND(SUM(CAST(UnitPrice as float)),2) < 400 then 'Silver'
+ELSE 'Gold'
+END
+AS Grade
+FROM Retail..OnlineRetail
+GROUP BY CustomerID
+
+-- Count of customer ID
+-- Here we can see we have how many active customer
+SELECT COUNT(DISTINCT CustomerID) CountOfCustomer
+FROM Retail..OnlineRetail
+
+-- The distribution of customer by country
+SELECT DISTINCT Country, CAST(CustomerID AS INT)
+FROM Retail..OnlineRetail
+WHERE CAST(CustomerID AS iNT) IS NOT NULL
+
+-- The distribution of customer by country
+-- The majority of our customers are from UK
+SELECT Country, COUNT(DISTINCT CustomerID) NumberOfCustomer
+FROM Retail..OnlineRetail
+WHERE CustomerID IS NOT NULL
+GROUP BY Country
+ORDER BY NumberOfCustomer DESC
+
+-- Find items that is higher than $5
+SELECT InvoiceNo, Description, Cast(UnitPrice AS FLOAT) UnitPrice
+FROM Retail..OnlineRetail
+WHERE Cast(UnitPrice AS FLOAT) > 10
+
+-- Finding items that is start by "P"
+SELECT InvoiceNo, Description, UnitPrice
+FROM Retail..OnlineRetail
+WHERE Description LIKE 'p%'
+
+
+-- Code for creating excel table
+
+-- Table1
+SELECT COUNT(DISTINCT CustomerID) NumberOfCustomer, ROUND(SUM(CAST(UnitPrice AS FLOAT)),2) TotalRevenue, ((ROUND(SUM(CAST(UnitPrice AS FLOAT)),2))/(COUNT(DISTINCT CustomerID))) AverageRevenue
+FROM Retail..OnlineRetail
+
+-- Table2
+SELECT  Country, ROUND(SUM(CAST(UnitPrice AS FLOAT)),2) TotalRevenue
+FROM Retail..OnlineRetail
+GROUP BY Country
+ORDER BY TotalRevenue DESC
+
+-- Table3
+SELECT TRY_CONVERT(DATE,InvoiceDate,5) AS Date, ROUND(SUM(CAST(UnitPrice AS FLOAT)),2) Revenue --5,110,115
+FROM Retail..OnlineRetail
+GROUP BY TRY_CONVERT(DATE,InvoiceDate,5)
+ORDER BY TRY_CONVERT(DATE,InvoiceDate,5)
+
+-- Table4
+SELECT Country, COUNT(DISTINCT CustomerID) NumberOfCustomer
+FROM Retail..OnlineRetail
+WHERE CustomerID IS NOT NULL
+GROUP BY Country
+ORDER BY NumberOfCustomer DESC
