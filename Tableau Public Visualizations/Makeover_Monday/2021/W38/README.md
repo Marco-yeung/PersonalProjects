@@ -2,7 +2,7 @@
 
 | **Mine** |
 | --------- |
-| <img src = "https://github.com/Marco-yeung/PersonalProjects/blob/main/Tableau%20Public%20Visualizations/Makeover_Monday/2021/W38/Images/Dark%20Web%20Price.pdf" width = "2000">
+| <img src = "https://github.com/Marco-yeung/PersonalProjects/blob/main/Tableau%20Public%20Visualizations/Makeover_Monday/2021/W38/Images/Dark%20Web%20Price.png" width = "2000">
 
 [Source](https://data.world/makeovermonday/2021w38)
 
