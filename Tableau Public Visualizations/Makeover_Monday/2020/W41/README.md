@@ -17,4 +17,4 @@
 
 - How to add a reference line to show column total
 - Use bar chart can show the percentage of each category clearly
-- Hoe to clear the grid lines on the background
+- How to clear the grid lines on the background
