@@ -11,6 +11,6 @@
 [Finished Visualization](https://public.tableau.com/app/profile/yeung.shu.to/viz/DarkWebPrice_16384375712010/Dashboard1)
 
 ## What I have learned
--- Create actions to expand a category into products each time
--- Use IF statement in the calculated field
--- Create a set or parameter
+- Create actions to expand a category into products each time
+- Use IF statement in the calculated field
+- Create a set or parameter
