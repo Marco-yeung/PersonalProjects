@@ -25,7 +25,14 @@ Below is some of my work and comparisons against the original visualizations.
 
 | **Original** | **Mine**|
 | --------- | --------|
-|<img src = "https://github.com/Marco-yeung/PersonalProjects/blob/main/Tableau%20Public%20Visualizations/Makeover_Monday/2020/W46/Images/Internet%20Advertising.png" width = "2000" >| <img src = "https://github.com/Marco-yeung/PersonalProjects/blob/main/Tableau%20Public%20Visualizations/Makeover_Monday/2020/W46/Images/Internet%20Advertising(mine).png"> 
+|<img src = "https://github.com/Marco-yeung/PersonalProjects/blob/main/Tableau%20Public%20Visualizations/Makeover_Monday/2020/W46/Images/Internet%20Advertising.png" width = "2000" >| <img src = "https://github.com/Marco-yeung/PersonalProjects/blob/main/Tableau%20Public%20Visualizations/Makeover_Monday/2020/W46/Images/Internet%20Advertising(mine).png">
+
+### [What animal could you beat in a fight?](https://github.com/Marco-yeung/PersonalProjects/tree/main/Tableau%20Public%20Visualizations/Makeover_Monday/2021/W20)
+
+
+| **Original** | **Mine**|
+| --------- | --------|
+|<img src = "https://github.com/Marco-yeung/PersonalProjects/blob/main/Tableau%20Public%20Visualizations/Makeover_Monday/2021/W20/Images/Animal.png" width = "500">| <img src = "https://github.com/Marco-yeung/PersonalProjects/blob/main/Tableau%20Public%20Visualizations/Makeover_Monday/2021/W20/Images/Animal(mine).png" height = "350"> |
 
 ### [Data assets and data culture](https://github.com/Marco-yeung/PersonalProjects/tree/main/Tableau%20Public%20Visualizations/Makeover_Monday/2020/W41)
 
@@ -34,10 +41,5 @@ Below is some of my work and comparisons against the original visualizations.
 | --------- | --------|
 |<img src = "https://github.com/Marco-yeung/PersonalProjects/blob/main/Tableau%20Public%20Visualizations/Makeover_Monday/2020/W41/Images/Data%20Assets%20and%20Data%20Culture.png" width = "500">| <img src = "https://github.com/Marco-yeung/PersonalProjects/blob/main/Tableau%20Public%20Visualizations/Makeover_Monday/2020/W41/Images/Data%20Assets%20and%20Data%20Culture(mine).png" height = "350"> |
 
-### [What animal could you beat in a fight?](https://github.com/Marco-yeung/PersonalProjects/tree/main/Tableau%20Public%20Visualizations/Makeover_Monday/2021/W20)
 
-
-| **Original** | **Mine**|
-| --------- | --------|
-|<img src = "https://github.com/Marco-yeung/PersonalProjects/blob/main/Tableau%20Public%20Visualizations/Makeover_Monday/2021/W20/Images/Animal.png" width = "500">| <img src = "https://github.com/Marco-yeung/PersonalProjects/blob/main/Tableau%20Public%20Visualizations/Makeover_Monday/2021/W20/Images/Animal(mine).png" height = "350"> |
 
