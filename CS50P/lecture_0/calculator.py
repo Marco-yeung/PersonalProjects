@@ -9,4 +9,4 @@ z = x / y
 print(f"{z:.2f}")
 
 # a more simplified version to do it would be
-# print(int(input("What is x? ")) + int(input("What is y? ")))
+# print(int(input("What is x? ")) + int(input("What is y? ")))``
