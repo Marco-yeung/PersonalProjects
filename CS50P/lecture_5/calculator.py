@@ -1,15 +1,15 @@
-def main():
-    x = int(input("what is x? "))
-    print("the squared of it is" , square(x))
+# def main():
+#     x = int(input("what is x? "))
+#     print("the squared of it is" , square(x))
           
-def square(x):
-    return x**2
-    # x = x ** 2
-    # remember that when defining a function would need to return a value
+# def square(x):
+#     return x**2
+#     # x = x ** 2
+#     # remember that when defining a function would need to return a value
     
-# main wont be called every time when adding this function, like importing square function from other script    
-if __name__ == "__main__":
-    main()
+# # main wont be called every time when adding this function, like importing square function from other script    
+# if __name__ == "__main__":
+#     main()
 
 
 '''
@@ -23,3 +23,15 @@ point:
 forgot to add a return object at start when defining a function
 
 '''
+
+# demonstrating a bug here
+def main():
+    x = int(input("what is x? "))
+    print("the squared of it is" , square(x))
+          
+def square(x):
+    return x + 2
+
+    
+if __name__ == "__main__":
+    main()
