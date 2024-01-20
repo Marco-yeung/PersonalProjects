@@ -30,7 +30,7 @@ def main():
     print("the squared of it is" , square(x))
           
 def square(x):
-    return x + 2
+    return x + x
 
     
 if __name__ == "__main__":
