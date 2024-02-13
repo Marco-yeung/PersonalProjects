@@ -5,6 +5,8 @@ from selenium.webdriver.common.by import By
 url = "https://www.vhis.gov.hk/en/consumer_corner/flexi-plan.html"
 driver = webdriver.Chrome()
 driver.get(url)
+
+"""
 table_header = driver.find_element(By.CLASS_NAME, "table-header")
 # store table header as a list
 table_header = table_header.find_elements(By.CLASS_NAME, "item__text")
@@ -36,4 +38,8 @@ company_name = company_name.find_element(By.TAG_NAME, "span")
 company_name = company_name.text.strip()
 print(company_name)
 
+"""
+
+latest_date = driver.find_element(By.CLASS_NAME, 'table-body-item--plan-date-no').find_element(By.TAG_NAME, "span")
+print(latest_date.text.strip())
 driver.quit()
