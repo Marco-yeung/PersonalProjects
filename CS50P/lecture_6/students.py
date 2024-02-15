@@ -35,7 +35,7 @@ for student in sorted(students):
 """
 students = []
 
-with open("student.csv") as file:
+with open("students.csv") as file:
     for line in file:
         name, house = line.rstrip().split(",")
         student= {}
@@ -51,7 +51,7 @@ with open("student.csv") as file:
 """
 students = []
 
-with open("student.csv") as file:
+with open("students.csv") as file:
     for line in file:
         name, house = line.rstrip().split(",")
         # it create a non empty dictionary with the name key and house key
@@ -67,7 +67,7 @@ with open("student.csv") as file:
 """
 students = []
 
-with open("student.csv") as file:
+with open("students.csv") as file:
     for line in file:
         name, house = line.rstrip().split(",")
         # it create a non empty dictionary with the name key and house key
@@ -90,7 +90,7 @@ for student in sorted(students, key = get_name, reverse = True):
 """
 students = []
 
-with open("student.csv") as file:
+with open("students.csv") as file:
     for line in file:
         name, house = line.rstrip().split(",")
         # it create a non empty dictionary with the name key and house key
@@ -101,3 +101,57 @@ for student in sorted(students, key = lambda student: student["name"]):
         print(f"student['name'] is in {student['house']}")
  
 """
+
+# introducing csv module
+"""
+import csv
+students = []
+
+# this reader function in csv woud help us read the file and figure out where is the comma
+# a reader would return list
+with open("students.csv") as file:
+    reader = csv.reader(file)
+    for name, reader in reader:
+          students.append({"name": name, "house": reader})
+# This lambda function are gonna called every one of the dictionaries in that list
+for student in sorted(students, key = lambda student: student["name"]):
+        print(f"student['name'] is in {student['house']}")
+"""
+
+# introducing dict_reader
+"""
+import csv
+students = []
+
+# this reader function in csv woud help us read the file and figure out where is the comma
+with open("students_dict.csv") as file:
+# DictReader would return a dictionary
+    reader = csv.DictReader(file)
+    for row in reader:
+          students.append({"name": row["name"], "house": row["home"]})
+# This lambda function are gonna called every one of the dictionaries in that list
+for student in sorted(students, key = lambda student: student["name"]):
+        print(f"student['name'] is in {student['house']}")
+"""
+
+# here we are using writerow to write things in the csv
+"""
+import csv 
+
+name = input("What's you name")
+home = input("Where's your home")
+
+with open("students_input.csv", "a") as file:
+    writer = csv.writer(file)
+    writer.writerow([name, home])
+"""
+
+# here we are using DictWriter
+import csv 
+
+name = input("What's you name")
+home = input("Where's your home")
+
+with open("students_input.csv", "a") as file:
+    writer = csv.DictWriter(file, fieldnames = ["name", "home"])
+    writer.writerow({"name": name, "house": home})
