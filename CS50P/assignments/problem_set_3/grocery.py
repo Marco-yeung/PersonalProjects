@@ -1,3 +1,5 @@
+from collections import Counter
+
 food_ls = []
 
 while True:
@@ -8,8 +10,9 @@ while True:
         print("Finished")
         break
 
-print(food_ls)
 
+# method of not using collections module and do it in your own function
+"""
 def find_duplicates(lst):
     counts = {}
     duplicates = []
@@ -33,8 +36,16 @@ if duplicates:
             print(f"{element} - {count} occurrences")
 else:
     print("The list does not have duplicates.")
+"""
 
+def find_duplicates(lst):
+    counts = Counter(lst)
+    duplicates = {element: count for element, count in counts.items() if count >=1}
+    return duplicates
 
+duplicates = find_duplicates(food_ls)
+for element, count in duplicates.items():
+    print(f"{count} {element.upper()}")
 
 
 
