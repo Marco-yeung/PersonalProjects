@@ -9,7 +9,7 @@ for letter in sentence:
 """
 
 def main():
-    shorten(input("Input: "))
+    shorten(input("Input: ").lower())
 
 
 def shorten(word):
@@ -20,6 +20,7 @@ def shorten(word):
         else:
             # print(letter, end="")
             whole_word += letter
+    return whole_word
 
 
 if __name__ == "__main__":
