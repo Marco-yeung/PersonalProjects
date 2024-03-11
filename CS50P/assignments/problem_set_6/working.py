@@ -30,23 +30,57 @@ def main():
     
 
 def convert(s):
-    start, end = s.split("to")
+    try: 
+        start, end = s.split("to")
+        start_hour, start_minutes = 0, 0
+        end_hour, end_minutes = 0, 0
+        # if ":" not in start or end:
+        if ":" not in start or ":" not in end:
+            if "AM" in start:
+                start_hour: int = int(start.replace("AM", "").strip())
+                start_minutes = 0
+            if "PM" in start:
+                start_hour: int = int(start.replace("PM", "").strip()) + 12
+                start_minutes = 0
 
-    if ":" and "PM" in start:
-        start_hour, start_minutes = start.replace("PM", "").strip().split(":")
-        start_hour = int(start_hour) + 12
-    elif ":" and "AM" in start:
-        start_hour, start_minutes = start.replace("AM", "").strip().split(":")
         
-    if ":" and "PM" in end:
-        end_hour, end_minutes = end.replace("PM", "").strip().split(":")
-        end_hour = int(end_hour) + 12
-    elif ":" and "AM" in end:
-        end_hour, end_minutes = end.replace("AM", "").strip().split(":")
+            if "PM" in end:
+                end_hour = end.replace("PM", "").strip()
+                end_hour = int(end_hour) + 12
+                end_minutes = 0
 
+            if "AM" in end:
+                end_hour: int = int(end.replace("AM", "").strip())
+                end_minutes = 0
+
+            
+
+        else:
+            if ":" and "PM" in start:
+                start_hour, start_minutes = start.replace("PM", "").strip().split(":")
+                start_hour = int(start_hour) + 12
+                start_minutes = int(start_minutes)
+            elif ":" and "AM" in start:
+                start_hour, start_minutes = start.replace("AM", "").strip().split(":")
+                start_hour = int(start_hour)
+                start_minutes = int(start_minutes)
+                
+            if ":" and "PM" in end:
+                end_hour, end_minutes = end.replace("PM", "").strip().split(":")
+                end_hour = int(end_hour) + 12
+                end_minutes = int(end_minutes)
+            elif ":" and "AM" in end:
+                end_hour, end_minutes = end.replace("AM", "").strip().split(":")
+                end_hour = int(end_hour)
+                end_minutes = int(end_minutes)
+
+        if start_minutes > 59 or end_minutes > 59 or "to" not in s:
+            raise ValueError()
+
+    
+    except ValueError as e:
+            raise ValueError()
     return print(f"{start_hour:02}:{start_minutes:02} to {end_hour:02}:{end_minutes:02}")
-
-
 
 
 
