@@ -10,7 +10,7 @@ steps
 - find text that inside "" after words "src="
 
 - replace "youtube.com/embed" with "youtu.be"
-- replace "www," with ""
+- replace "www." with ""
 
 """
 
@@ -24,10 +24,14 @@ def main():
 
 
 def parse(s):
-    ...
+    if re.search(r'src="([^"]+)"', s) and re.search(r'youtube', s):
+        matches = re.search(r'src="([^"]+)"', s)
+        s = matches.group(1)
+        s = s.replace("youtube.com/embed", "youtu.be").replace("www.", "")
+        return s
+    else:
+        return None
 
-
-...
 
 
 if __name__ == "__main__":
