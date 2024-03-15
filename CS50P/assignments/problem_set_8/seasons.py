@@ -6,26 +6,30 @@
 
 import datetime
 import inflect
+import sys
 
 def main():
-    convert_date(input('Date of Birth: '), 'minutes')
+    print(convert_date(input('Date of Birth: ')), ' minutes')
 
 def convert_date(date):
-    year, month, day = date.split('-')
-    year = int(year)
-    month = int(month)
-    day = int(day)
+    try:
+        year, month, day = date.split('-')
+        year = int(year)
+        month = int(month)
+        day = int(day)
 
-    before = datetime.date(year,month,day)
-    now = datetime.date.today()
+        before = datetime.date(year,month,day)
+        now = datetime.date.today()
 
-    diff = now - before
-    ouput = diff.days*24*60
+        diff = now - before
+        ouput = diff.days*24*60
 
-    p = inflect.engine()
-    words = p.number_to_words(ouput)
+        p = inflect.engine()
+        words = p.number_to_words(ouput)
 
-    return words
+        return words
+    except ValueError:
+        sys.exit()
 
 
 
