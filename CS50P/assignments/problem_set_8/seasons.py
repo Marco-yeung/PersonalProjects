@@ -21,7 +21,7 @@ def convert_date(date):
         before = datetime.date(year,month,day)
         now = datetime.date.today()
 
-        diff = now - before
+        diff = now - before 
         ouput = diff.days*24*60
 
         p = inflect.engine()
