@@ -4,3 +4,86 @@
 3. set q be quit() be my first condition, once quite the function, print the win and losses of user and computer 
 
 """
+import sys
+import random
+
+answer = input("Do you want to play rock, paper and scissors game? (Y/N) ")
+choice_ls = ["rock", "paper", "scissors"]
+
+if answer.lower() not in ['y', 'n']:
+    print('please enter valid input')
+elif answer.lower() == 'n':
+    sys.exit("Welcome to play next time")
+else:
+    choice = input("What is your choice? (Rock/Paper/Scissors) ").lower()
+    com_choice_int = random.randint(0, 2)
+    com_choice = choice_ls[com_choice_int]
+
+if choice not in choice_ls:
+    print('please enter valid input')
+
+
+if choice == com_choice:
+    print(f"your choice: {choice}")
+    print("It's a tie!")
+elif choice == 'rock':
+    if com_choice == "scissors":
+        print(f"your choice: {choice}")
+        print(f"computer choice: {com_choice}")
+        print("You win!")
+    else:
+        print(f"your choice: {choice}")
+        print(f"computer choice: {com_choice}")
+        print("You lose!")
+elif choice == 'rock':
+    if com_choice == "paper":
+        print(f"your choice: {choice}")
+        print(f"computer choice: {com_choice}")
+        print("You lose!")
+    else:
+        print(f"your choice: {choice}")
+        print(f"computer choice: {com_choice}")
+        print("You win!")
+
+elif choice == 'paper':
+    if com_choice == "scissors":
+        print(f"your choice: {choice}")
+        print(f"computer choice: {com_choice}")
+        print("You lose!")
+    else:
+        print(f"your choice: {choice}")
+        print(f"computer choice: {com_choice}")
+        print("You win!")
+    
+elif choice == 'paper':
+    if com_choice == "rock":
+        print(f"your choice: {choice}")
+        print(f"computer choice: {com_choice}")
+        print("You win!")
+    else:
+        print(f"your choice: {choice}")
+        print(f"computer choice: {com_choice}")
+        print("You lose!")
+
+elif choice == 'scissors':
+    if com_choice == "rock":
+        print(f"your choice: {choice}")
+        print(f"computer choice: {com_choice}")
+        print("You lose!")
+    else:
+        print(f"your choice: {choice}")
+        print(f"computer choice: {com_choice}")
+        print("You win!")
+
+elif choice == 'scissors':
+    if com_choice == "paper":
+        print(f"your choice: {choice}")
+        print(f"computer choice: {com_choice}")
+        print("You win!")
+    else:
+        print(f"your choice: {choice}")
+        print(f"computer choice: {com_choice}")
+        print("You lose!")
+
+
+
