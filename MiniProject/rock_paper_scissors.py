@@ -4,6 +4,9 @@
 3. set q be quit() be my first condition, once quite the function, print the win and losses of user and computer 
 
 """
+
+# my own rock paper scissors game
+"""
 import sys
 import random
 
@@ -85,5 +88,48 @@ elif choice == 'scissors':
         print(f"computer choice: {com_choice}")
         print("You lose!")
 
+"""
 
+# online rock paper scisors game
+
+import random
+import sys
+
+print("Welcome to my rock paper scissors game!\n")
+choice_ls = ["rock", "paper", "scissors"]
+
+com_wins = 0
+player_wins = 0
+
+while True:
+    answer = input("Rock, paper, scissor or Q to quit the game? ").lower()
+    if answer == "q":
+        break
+    elif answer not in choice_ls:
+        print("please enter valid input")
+        # if player is not inputting anything match with the choice_ls, continue would force player to enter sth match with the list first. It would back to the top of the while loop. It is one of the function in while loop
+        continue
+
+    com_choice_int = random.randint(0, 2)
+    com_choice = choice_ls[com_choice_int]
+
+    if com_choice == answer:
+        print("It's a tie!")
+    elif answer == "rock" and com_choice == "scissors":
+        print("You win!")
+        player_wins += 1
+    elif answer == "paper" and com_choice == "rock":
+        print("You win!")
+        player_wins += 1
+    elif answer == "scissors" and com_choice == "paper":
+        print("You win!")
+        player_wins += 1
+    else:
+        print("computer win!")
+        com_wins += 1
+
+print(f"You win {player_wins} times.")
+print(f"Computer win {com_wins} times.")
+
+print("Goodbye!")
 
