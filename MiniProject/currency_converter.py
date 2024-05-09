@@ -63,10 +63,10 @@ def convert(currency1, currency2, amount):
     print(f"{amount} {currency1} is equal to {converted_amount} {currency2}")
 
 
-data = get_currencies()
-print_currencies(data)
-rate = exchange_rate('USD', 'HKD')
-print(rate)
+# data = get_currencies()
+# print_currencies(data)
+# rate = exchange_rate('USD', 'HKD')
+# print(rate)
 
 def main():
     currencies = get_currencies()
