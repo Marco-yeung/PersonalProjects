@@ -24,7 +24,7 @@ class User():
 """
 The parent class defines common attributes and behaviors that can be shared among multiple child classes.
 The child class extends the functionality of the parent class by adding new attributes or overriding existing ones.
-The child class can introduce new methods or properties specific to its  own implementation.
+The child class can introduce new methods or properties specific to its own implementation.
 The parent class acts as a blueprint for creating child classes.
 The child class can access and initialize attributes defined in the parent class using the super() keyword.
 """
