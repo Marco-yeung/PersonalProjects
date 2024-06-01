@@ -1,0 +1,16 @@
+{
+    "bank_accounts": [
+        {
+            "name": "Ann",
+            "age": 25,
+            "gender": "F",
+            "balance": 250
+        },
+        {
+            "name": "Bob",
+            "age": 40,
+            "gender": "M",
+            "balance": 300
+        }
+    ]
+}
