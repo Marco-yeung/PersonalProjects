@@ -11,6 +11,12 @@
             "age": 40,
             "gender": "M",
             "balance": 300
+        },
+        {
+            "name": "Sam",
+            "age": 18,
+            "gender": "M",
+            "balance": 100
         }
     ]
 }

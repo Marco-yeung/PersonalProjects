@@ -91,9 +91,19 @@ while True:
         else:
             print("Invalid choice. Please try again.")
     else:
-        print("Account not found. Please try again.")
+        response = input("Account not found. Do you want to ope a new account? (Y/N)")
+        if response.lower() == "y":
+            name = input("Enter your name: ")
+            age = int(input("Enter your age: "))
+            gender = input("Enter your gender: ")
+            balance = int(input("How much you would like to deposit now? "))
+            user_acc = Bank(name, age, gender, balance)
+            bank_accounts.append(user_acc)
+            break
+        else:
+            break
 
-# Here is 2 way to modigy the JSON file
+# Here is 2 way to modify the JSON file
 # Update the JSON file
 # data["bank_accounts"] = [account.__dict__ for account in bank_accounts]
 # Update the JSON file
@@ -108,11 +118,11 @@ for account in bank_accounts:
     updated_data["bank_accounts"].append(account_data)
 
 with open("account_details.json", "w") as file:
-    json.dump(data, file, indent=4)
+    json.dump(updated_data, file, indent=4)
     print("JSON file updated successfully!")
 
 
-
+print("Thanks for using our service.")
 
 # user1 = User("sam", 18, "M")
 # User.show_details(user1)
