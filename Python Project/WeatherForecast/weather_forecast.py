@@ -65,18 +65,10 @@ def get_temperature_summary(single_json) -> str:
     min_temp = single_json['forecastMintemp']['value']
     return f"Maximum temperature: {max_temp}°C, Minimum temperature: {min_temp}°C"
 
-def main():
-    url = 'https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=fnd&lang=en'
-    whole_json = get_json(url)
-    print('welcome to my weather forecast!')
-
-    date = input('Please enter the date you want to get the weather forecast? (YYYYMMDD) ')
-    single_json = get_chosen_json(date, whole_json)
-
+def condition(date, single_json):
     print(f"1. Weather description of {date}")
     print(f"2. Wind description of {date}")
     print(f"3. Maximum and minimum temperature of {date}\n")
-    
     while True:
         command = input("Enter a command (q to quit): ").lower()
         if command == 'q':
@@ -95,6 +87,17 @@ def main():
             print(f"1. Weather description of {date}")
             print(f"2. Wind description of {date}")
             print(f"3. Maximum and minimum temperature of {date}\n")
+
+
+def main():
+    url = 'https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=fnd&lang=en'
+    whole_json = get_json(url)
+    print('welcome to my weather forecast!')
+
+    date = input('Please enter the date you want to get the weather forecast? (YYYYMMDD) ')
+    single_json = get_chosen_json(date, whole_json)
+
+    condition(date, single_json)
 
     print("Thanks for using my weather forecast service")
 
