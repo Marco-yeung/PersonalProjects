@@ -81,11 +81,11 @@ for cert in plans:
     data['certifications'].append(cert_data)
 
 
-print(json.dumps(data, indent= 4))
-print(json.dumps(cert_data, indent = 4))
-# all length is 63
-# print(len(data['plan']['name_of_certified_flexi_plan']))
-# print(len(data['plan']['name_of_offering_company']))
-# print(len(data['plan']['earliest_date']))
-# print(len(data['plan']['effective_date']))
+# print(json.dumps(data, indent= 4))
+# print(json.dumps(cert_data, indent = 4))
+
 driver.quit()
+plan_df = pd.DataFrame(data['plan'])
+certifications_df = pd.DataFrame(data['certifications'])
+certifications_df_expanded = certifications_df.explode(['cert_no', 'ward_level', 'plan_premium'])
+df = pd.concat([plan_df, certifications_df_expanded], axis=1)
