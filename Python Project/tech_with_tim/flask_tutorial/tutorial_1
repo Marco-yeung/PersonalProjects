@@ -1,0 +1,26 @@
+# https://www.youtube.com/watch?v=mqhxxeeTbu0&list=PLzMcBGfZo4-n4vJJybUVV3Un_NFS5EOgX
+
+from flask import Flask, redirect, url_for
+
+app = Flask(__name__)
+
+# function that would display the page
+# this would return to our home page, we could also say "/home"
+@app.route("/")
+def home():
+    return "Hello! This is the main page"
+
+# this would return the name we type after the slash, it could return whatever we type
+@app.route("/<name>")
+def user(name):
+    return f"Hello! {name}!"
+
+@app.route("/admin")
+def admin():
+    return redirect(url_for("home"))
+
+
+
+
+if __name__ == '__main__':
+    app.run()
