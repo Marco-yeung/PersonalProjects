@@ -8,7 +8,7 @@ app = Flask(__name__)
 # this would return to our home page, we could also say "/home"
 @app.route("/<name>")
 def home(name):
-    return render_template("index.html", content = name, r = 2)
+    return render_template("index.html", content = ["tech", "with", "tim"], r = 2)
 
 if __name__ == '__main__':
     app.run()
